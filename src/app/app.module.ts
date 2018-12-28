@@ -8,6 +8,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PhotoComponent } from './pages/photo/photo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     PortfolioComponent,
     AboutComponent,
-    PhotoComponent
+    PhotoComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
