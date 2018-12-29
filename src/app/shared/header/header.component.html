@@ -5,7 +5,7 @@
     <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
     <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
   </label>
-  <div class="ae-container-fluid rk-topbar">
+  <div class="ae-container-fluid rk-topbar" *ngIf="_infoPaginaService._cargada">
     <h1 class="rk-logo">
       <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">{{
         _infoPaginaService._info.titulo
