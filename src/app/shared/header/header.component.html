@@ -7,12 +7,14 @@
   </label>
   <div class="ae-container-fluid rk-topbar">
     <h1 class="rk-logo">
-      <a [routerLink]="['/inicio']">Rock or die photo´s</a>
+      <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">{{
+        _infoPaginaService._info.titulo
+      }}</a>
     </h1>
     <nav class="rk-navigation">
       <ul class="rk-menu">
         <li class="rk-menu__item" routerLinkActive="active">
-          <a class="rk-menu__link" [routerLink]="['inicio']">Home</a>
+          <a class="rk-menu__link" [routerLink]="['/inicio']">Home</a>
         </li>
         <li class=" rk-menu__item" routerLinkActive="active">
           <a

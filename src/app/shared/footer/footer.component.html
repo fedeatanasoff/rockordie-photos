@@ -3,33 +3,24 @@
     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
       <ul class="rk-menu rk-footer-menu">
         <li class="rk-menu__item">
-          <a
-            [routerLink]="['/about']"
-            routerLinkActive="router-link-active"
-            class="rk-menu__link"
-            >Sobre mi</a
-          >
+          <a [routerLink]="['/sobre-mi']" class="rk-menu__link">Sobre mi</a>
         </li>
         <!-- <li class="rk-menu__item">
           <a href="documentation.html" class="rk-menu__link">Docs</a>
         </li> -->
         <li class="rk-menu__item">
-          <a
-            [routerLink]="['/contacto']"
-            routerLinkActive="router-link-active"
-            class="rk-menu__link"
-            >Contacto</a
-          >
+          <a [routerLink]="['/contacto']" class="rk-menu__link">Contacto</a>
         </li>
       </ul>
       <p class="rk-footer__text rk-footer__copy ">
         <span class="ae-u-bold">© </span
-        ><span class="ae-u-bolder">{{ anio }} Rock or Die Photo´s </span>All
-        Right Reserved.
+        ><span class="ae-u-bolder"
+          >{{ anio }} {{ _infoPaginaService._info.titulo }} </span
+        >All Right Reserved.
       </p>
     </div>
     <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a href="#0" class="rk-social-btn ">
+      <a [href]="_infoPaginaService._info.facebook" class="rk-social-btn ">
         <svg><use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg>
       </a>
       <!-- <a href="#0" class="rk-social-btn ">
@@ -37,7 +28,7 @@
           <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
         </svg>
       </a> -->
-      <a href="#0" class="rk-social-btn ">
+      <a [href]="_infoPaginaService._info.instagram" class="rk-social-btn ">
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
         </svg>

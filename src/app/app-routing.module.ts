@@ -10,11 +10,11 @@ const APP_ROUTES: Routes = [
   { path: 'sobre-mi', component: AboutComponent },
   { path: 'photo', component: PhotoComponent },
   { path: 'contacto', component: ContactComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(APP_ROUTES)],
+  imports: [RouterModule.forRoot(APP_ROUTES, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
