@@ -8,7 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 const APP_ROUTES: Routes = [
   { path: 'inicio', component: PortfolioComponent },
   { path: 'sobre-mi', component: AboutComponent },
-  { path: 'photo', component: PhotoComponent },
+  { path: 'photo/:id', component: PhotoComponent },
   { path: 'contacto', component: ContactComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];

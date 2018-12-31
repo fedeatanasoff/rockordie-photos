@@ -10,22 +10,28 @@ export class PhotosService {
   cargando = true;
   fotos: Photo[] = [];
   constructor(private http: HttpClient) {
-    this.cargarPhotos();
+    // this.cargarPhotos();
   }
 
-  private cargarPhotos() {
-    this.http
-      .get('https://rockordie-photos.firebaseio.com/photos_idx.json')
-      .subscribe((data: Photo[]) => {
-        this.cargando = false;
-        this.fotos = data;
-        console.log(data);
-      });
-  }
+  // private cargarPhotos() {
+  //   this.http
+  //     .get('https://rockordie-photos.firebaseio.com/photos_idx.json')
+  //     .subscribe((data: Photo[]) => {
+  //       this.cargando = false;
+  //       this.fotos = data;
+  //       console.log(data);
+  //     });
+  // }
 
   getPhotos(): Observable<Photo> {
     return this.http.get<Photo>(
       'https://rockordie-photos.firebaseio.com/photos_idx.json'
+    );
+  }
+
+  getPhoto(id: number) {
+    return this.http.get(
+      `https://rockordie-photos.firebaseio.com/photos/${id}.json`
     );
   }
 }

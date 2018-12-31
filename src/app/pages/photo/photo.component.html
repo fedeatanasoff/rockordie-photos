@@ -5,47 +5,46 @@
       <p class="ae-theta rk-portfolio-category ">Branding</p>
     </div>
   </header> -->
-  <div class="ae-container-fluid">
-    <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
-      <!-- <div
+  <!-- <div class="ae-container-fluid">
+    <div class="ae-grid ae-grid--collapse rk-portfolio-info " *ngIf="photo">
+      <div
         class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left"
       >
         <h2 class="rk-portfolio-inner-title ">
           Essential Stationery Branding Mockup
         </h2>
-      </div> -->
+      </div>
       <div
         class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details"
       >
         <p class="rk-portfolio-inner-client ">
-          <span class="ae-lambda">Client: </span
-          ><span class="ae-u-bolder">Agency Design Studio</span>
+          <span class="ae-lambda">Banda: </span>
+          <span class="ae-u-bolder">{{ photo.banda }}</span>
         </p>
         <p class="au-underline rk-portfolio-inner-website ">
-          <a href="#0" class="ae-kappa">www.agencydesign.com</a>
+          <a href="#0" class="ae-kappa">{{ photo.web }}</a>
         </p>
         <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">
-          12 August, 2015
+          {{ photo.fecha }}
         </p>
       </div>
     </div>
-  </div>
-  <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+  </div> -->
+  <div
+    class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner"
+    *ngIf="photo"
+  >
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
       <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-        <h4 class="ae-u-bolder">Left Box Text</h4>
-        <p class="ae-eta">
-          A series of essential stationery format to showcase your branding
-          projects.
-        </p>
-        <p class="ae-eta">
-          It includes a A6 flyer, A5 folder, A4 horizontal paper and a business
-          card mockup. You can easily put your own graphics and create a new
-          layout according to your needs.
+        <h4 class="ae-u-bolder">{{ photo.banda }}</h4>
+        <p class="ae-eta">{{ photo.lugar }}</p>
+        <p class="ae-eta">{{ photo.fecha }}</p>
+        <p class="au-underline rk-portfolio-inner-website ">
+          <a href="#0" class="ae-kappa">{{ photo.web }}</a>
         </p>
       </div>
       <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-        <img src="assets/img/inner-1.jpg" alt="Urku Portfolio" />
+        <img src="assets/photos/{{ id }}.jpg" alt="Urku Portfolio" />
       </div>
     </div>
     <!-- <div class="ae-grid ae-grid--collapse">
@@ -136,12 +135,15 @@
       </div>
     </div> -->
   </div>
-  <!-- <div class="ae-container-fluid au-pt-4 au-pb-4">
+  <div class="ae-container-fluid au-pt-4 au-pb-4">
     <div class="group-buttons">
-      <a href="#0" class="au-mt-2 arrow-button arrow-button--right"
-        >Next Project<span class="arrow-cont">
+      <a
+        [routerLink]="['/inicio']"
+        routerLinkActive="router-link-active"
+        class="au-mt-2 arrow-button arrow-button--right"
+        >Volver<span class="arrow-cont">
           <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
       ></a>
     </div>
-  </div> -->
+  </div>
 </section>
