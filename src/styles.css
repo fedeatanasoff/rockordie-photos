@@ -81,6 +81,14 @@
   animation-name: fadeIn;
 }
 
+/*
+  Color del Loading
+*/
+svg path,
+svg rect {
+  fill: black;
+}
+
 @media (prefers-reduced-motion) {
   .animated {
     -webkit-animation: unset !important;
