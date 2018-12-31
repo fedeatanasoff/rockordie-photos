@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { PhotoComponent } from './pages/photo/photo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     PortfolioComponent,
     AboutComponent,
     PhotoComponent,
-    ContactComponent
+    ContactComponent,
+    SearchComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
