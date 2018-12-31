@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Photo } from '../interfaces/photo';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,11 @@ export class PhotosService {
         this.fotos = data;
         console.log(data);
       });
+  }
+
+  getPhotos(): Observable<Photo> {
+    return this.http.get<Photo>(
+      'https://rockordie-photos.firebaseio.com/photos_idx.json'
+    );
   }
 }

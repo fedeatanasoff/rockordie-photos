@@ -1,5 +1,6 @@
 <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
-  <div align="center">
+  <!-- condicional por si esta tratando de obtener las fotos -->
+  <div align="center" *ngIf="!photos && !error">
     <div class="loader loader--style1" title="0">
       <svg
         version="1.1"
@@ -40,7 +41,12 @@
     </div>
   </div>
 
-  <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 ">
+  <!-- condicional por si no se pudo conectar con el servidor -->
+  <div align="center" *ngIf="error">
+    <h2>{{ error | uppercase }}</h2>
+  </div>
+
+  <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 " *ngIf="photos">
     <a
       [routerLink]="['/photo']"
       routerLinkActive="router-link-active"
