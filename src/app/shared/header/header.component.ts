@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
       return;
     }
 
-    this.router.navigate(['/buscar', termino.toLowerCase]);
+    this.router.navigate(['/buscar', termino]);
 
     console.log(termino);
   }
