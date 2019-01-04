@@ -1,4 +1,4 @@
-<section class="ae-container-fluid ae-container-fluid--full">
+<section class="ae-container-fluid ae-container-fluid--full animated fadeIn">
   <div class="item-inside__meta">
     <h1 class="ae-u-bolder rk-portfolio-title ">Contacto</h1>
     <br />
@@ -34,7 +34,11 @@
     </p>
   </div>
 
-  <div class="ae-grid ae-grid--alt au-xs-ptp-1" align="center">
+  <div
+    class="ae-grid ae-grid--alt au-xs-ptp-1"
+    align="center"
+    *ngIf="_infoService._cargada"
+  >
     <div class="ae-grid__item--alt item-lg-4 item-lg--offset-4">
       <a href="mailto:{{ _infoService._info.email }}"
         ><img src="assets/img/social/email.png" alt="" width="25%"
