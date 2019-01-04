@@ -8,8 +8,8 @@ import { InfoPagina } from '../interfaces/info-pagina';
 export class InfoPaginaService {
   _info: InfoPagina;
   _cargada = false;
-
   _about: any;
+  _redes: any[] = [];
 
   constructor(private _http: HttpClient) {
     this.cargarInfo();
@@ -22,6 +22,7 @@ export class InfoPaginaService {
       .subscribe((data: InfoPagina) => {
         this._cargada = true;
         this._info = data;
+        this._redes = data.redes;
       });
   }
 

@@ -89,6 +89,11 @@ svg rect {
   fill: black;
 }
 
+.img-hover:hover {
+  transition: all 0.3s ease-in-out;
+  filter: opacity(0.5);
+}
+
 @media (prefers-reduced-motion) {
   .animated {
     -webkit-animation: unset !important;

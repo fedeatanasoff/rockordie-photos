@@ -3,6 +3,5 @@ export interface InfoPagina {
   email?: string;
   nombre_corto?: string;
   pagina_autor?: string;
-  facebook?: string;
-  instagram?: string;
+  redes: [object];
 }

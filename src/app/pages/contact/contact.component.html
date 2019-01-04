@@ -7,20 +7,19 @@
     </p>
   </div>
   <div class="ae-grid ae-grid--alt au-xs-ptp-1" align="center">
-    <div class="ae-grid__item--alt item-lg-4">
-      <img src="assets/img/facebook.svg" alt="" width="25%" />
-      <h5 class="ae-u-bolder au-mt-2">/rockoordie</h5>
-      <br />
-    </div>
-    <div class="ae-grid__item--alt item-lg-4">
-      <img src="assets/img/ig.svg" alt="" width="25%" />
-      <h5 class="ae-u-bolder au-mt-2">rockoordie@gmail.com</h5>
-      <br />
-    </div>
-
-    <div class="ae-grid__item--alt item-lg-4">
-      <img src="assets/img/flickr.svg" alt="" width="25%" />
-      <h5 class="ae-u-bolder au-mt-2">/rockoordie</h5>
+    <div
+      class="ae-grid__item--alt item-lg-4"
+      *ngFor="let item of _infoService._redes"
+    >
+      <a [href]="item.url" target="_blank">
+        <img
+          src="assets/img/{{ item.img }}"
+          alt=""
+          width="25%"
+          class="img-hover"
+        />
+      </a>
+      <h5 class="ae-u-bolder au-mt-2">{{ item.user }}</h5>
       <br />
     </div>
   </div>
@@ -37,8 +36,10 @@
 
   <div class="ae-grid ae-grid--alt au-xs-ptp-1" align="center">
     <div class="ae-grid__item--alt item-lg-4 item-lg--offset-4">
-      <img src="assets/img/email.svg" alt="" width="25%" />
-      <h5 class="ae-u-bolder au-mt-2">@rockordie_photos</h5>
+      <a href="mailto:{{ _infoService._info.email }}"
+        ><img src="assets/img/social/email.png" alt="" width="25%"
+      /></a>
+      <h5 class="ae-u-bolder au-mt-2">{{ _infoService._info.email }}</h5>
     </div>
   </div>
 </section>

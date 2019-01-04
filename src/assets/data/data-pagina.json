@@ -1,8 +1,23 @@
 {
   "titulo": "Rock or Die Photo´s",
-  "email": "rockordie@gmail.com",
+  "email": "rockoordie@gmail.com",
   "nombre_corto": "Rock or Die",
   "pagina-autor": "https://fedeatanasoff.github.io/cv/",
-  "facebook": "https://www.facebook.com",
-  "instagram": "https://www.instagram.com"
+  "redes": [
+    {
+      "img": "facebook.png",
+      "url": "https://www.facebook.com/rockoordie",
+      "user": "/rockoordie"
+    },
+    {
+      "img": "ig.png",
+      "url": "https://www.instagram.com/rockoordie",
+      "user": "@rockoordie"
+    },
+    {
+      "img": "flickr.png",
+      "url": "https://www.flickr.com/photos/rockoordie",
+      "user": "/rockoordie"
+    }
+  ]
 }
