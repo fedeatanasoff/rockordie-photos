@@ -8,19 +8,19 @@ import { Photo } from '../../interfaces/photo';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  // photos: Photo;
-  // error: string;
+  photos: Photo;
+  error: string;
   constructor(public _photoService: PhotosService) {}
 
   ngOnInit() {
-    // this._photoService.getPhotos().subscribe(
-    //   (data: Photo) => {
-    //     this.photos = data;
-    //   },
-    //   error => {
-    //     console.log('error al conectar con el servidor');
-    //     this.error = 'Error al conectar con el servidor. Intente nuevamente';
-    //   }
-    // );
+    this._photoService.getPhotos().subscribe(
+      (data: Photo) => {
+        this.photos = data;
+      },
+      error => {
+        console.log('error al conectar con el servidor');
+        this.error = 'Error al conectar con el servidor. Intente nuevamente';
+      }
+    );
   }
 }
