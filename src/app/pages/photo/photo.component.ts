@@ -18,15 +18,15 @@ export class PhotoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(parametros => {
-      console.log(parametros);
-      this.photoService
-        .getPhoto(parametros['id'])
-        .subscribe((foto: PhotoDescription) => {
-          this.photo = foto;
-          this.id = parametros['id'];
-          // console.log(foto);
-        });
-    });
+    // this.route.params.subscribe(parametros => {
+    //   console.log(parametros);
+    //   this.photoService
+    //     .getPhoto(parametros['id'])
+    //     .subscribe((foto: PhotoDescription) => {
+    //       this.photo = foto;
+    //       this.id = parametros['id'];
+    //       // console.log(foto);
+    //     });
+    // });
   }
 }

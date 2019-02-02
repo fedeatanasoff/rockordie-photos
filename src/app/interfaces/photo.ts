@@ -1,6 +1,8 @@
 export interface Photo {
+  banda: string;
   categoria: string;
-  cod: string;
-  titulo: string;
-  url: string;
+  fecha: string;
+  imagen: string;
+  lugar: string;
+  web: string;
 }

@@ -1,6 +1,6 @@
 <section class="ae-container-fluid ae-container-fluid--full animated fadeIn">
-  <div align="center" *ngIf="_photoService.cargando">
-    <div class="loader loader--style1" title="0">
+  <div align="center">
+    <div class="loader loader--style1" title="0" *ngIf="loading">
       <svg
         version="1.1"
         id="loader-1"
@@ -40,16 +40,11 @@
     </div>
   </div>
   <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 ">
-    <a
-      routerLinkActive="router-link-active"
-      class="rk-item ae-masonry__item"
-      *ngFor="let photo of _photoService.fotos"
-      [routerLink]="['/photo', photo.cod]"
-    >
-      <img src="assets/img/photos/{{ photo.url }}" alt="" />
+    <a class="rk-item ae-masonry__item" *ngFor="let key of (photos | keys)">
+      <img src="assets/img/photos/{{ photos[key].imagen }}" alt="" />
       <div class="item-meta">
-        <h2>{{ photo.titulo }}</h2>
-        <p>{{ photo.categoria }}</p>
+        <h2>{{ photos[key].banda }}</h2>
+        <p>{{ photos[key].fecha }}</p>
       </div>
     </a>
   </div>

@@ -10,6 +10,7 @@ import { PhotoComponent } from './pages/photo/photo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SearchComponent } from './pages/search/search.component';
+import { KeysPipe } from './pipes/keys.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchComponent } from './pages/search/search.component';
     AboutComponent,
     PhotoComponent,
     ContactComponent,
-    SearchComponent
+    SearchComponent,
+    KeysPipe
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
