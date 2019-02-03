@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SearchComponent } from './pages/search/search.component';
 import { KeysPipe } from './pipes/keys.pipe';
+import { TarjetaMasonryComponent } from './components/shared/tarjeta-masonry/tarjeta-masonry.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { KeysPipe } from './pipes/keys.pipe';
     PhotoComponent,
     ContactComponent,
     SearchComponent,
-    KeysPipe
+    KeysPipe,
+    TarjetaMasonryComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -7,6 +7,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PhotosService {
+  photosURL = `https://rockordie-photos.firebaseio.com/photos.json`;
+  photoURL = `https://rockordie-photos.firebaseio.com/photos`;
+
   cargando = true;
   fotos: any;
   fotosFiltradas: any[] = [];
@@ -31,9 +34,22 @@ export class PhotosService {
       .get('https://rockordie-photos.firebaseio.com/photos.json')
       .pipe(
         map((foto: Photo) => {
+          this.fotos = foto;
+          console.log(this.fotos);
           return foto;
         })
       );
+  }
+
+  getPhoto(key$: string) {
+    const url = `${this.photoURL}/${key$}.json`;
+
+    return this.http.get(url).pipe(
+      map((foto: Photo) => {
+        console.log('getPhoto =>', foto);
+        return foto;
+      })
+    );
   }
 
   // buscarPhoto(termino: string) {
