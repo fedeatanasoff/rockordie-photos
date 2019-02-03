@@ -21,9 +21,10 @@ export class PhotoComponent implements OnInit {
     this.route.params.subscribe(parametros => {
       console.log('parametro =>', parametros);
       this.photoService.getPhoto(parametros['id']).subscribe((foto: any) => {
-        // this.photo = foto;
+        this.photo = foto;
         // this.id = parametros['id'];
-        console.log('tratando de ver si llega el objeto =>', foto);
+        console.log('tratando de ver si llega el objeto =>', this.photo);
+        
       });
     });
   }
