@@ -1,44 +1,56 @@
-<section class="ae-container-fluid ae-container-fluid--full animated fadeIn">
-  <div></div>
-  <div
-    class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
-    *ngIf="photo"
-  >
-    <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
-      <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-        <h4 class="ae-u-bolder">{{ photo.banda }}</h4>
-        <!-- <p>
-          <small
-            ><i class="fas fa-tag"></i>&nbsp;&nbsp;{{ photo.categoria }}</small
-          >
-        </p> -->
-        <p class="ae-kappa">
-          <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;{{ photo.lugar }}
-        </p>
-        <p class="ae-kappa">
-          <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{ photo.fecha }}
-        </p>
+<!-- <section class="ae-container-fluid ae-container-fluid--full animated fadeIn"> -->
 
-        <p class="rk-portfolio-inner-website ">
-          <a [href]="photo.web" class="ae-kappa "
-            ><i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Sitio Web</a
-          >
-        </p>
-      </div>
-      <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-        <img src="assets/img/photos/{{ photo.imagen }}" alt="Urku Portfolio" />
-      </div>
+<section
+  class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
+  *ngIf="photo"
+>
+  <div class="ae-grid ae-grid--collapse">
+    <div class="ae-grid__item item-lg-6">
+      <!-- Image -->
+
+      <img src="assets/img/photos/{{ photo.imagen }}" alt="Urku Portfolio" />
     </div>
-  </div>
-  <div class="ae-container-fluid au-pt-4 au-pb-4">
-    <div class="group-buttons">
+    <div class="ae-grid__item item-lg-5 au-lg-ptp-1 item-lg--offset-1">
+      <!-- Text content -->
+      <h4 class="ae-u-bolder">{{ photo.banda }}</h4>
+
+      <p class="ae-kappa">
+        <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;{{ photo.lugar }}
+      </p>
+      <p class="ae-kappa">
+        <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{
+          photo.fecha | date: "dd - MM - y"
+        }}
+      </p>
+
+      <p class="rk-portfolio-inner-website ">
+        <a [href]="photo.web" class="ae-kappa "
+          ><i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Sitio Web</a
+        >
+      </p>
       <a
         [routerLink]="['/inicio']"
         routerLinkActive="router-link-active"
         class="au-mt-2 arrow-button arrow-button--right"
         >Volver<span class="arrow-cont">
-          <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
       ></a>
     </div>
   </div>
+  <!-- <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+      <div class="ae-grid__item item-lg-5 au-lg-ptp-1"></div>
+    </div> -->
 </section>
+<div class="ae-container-fluid au-pt-4 au-pb-4">
+  <div class="group-buttons">
+    <a
+      [routerLink]="['/inicio']"
+      routerLinkActive="router-link-active"
+      class="au-mt-2 arrow-button arrow-button--right"
+      >Volver<span class="arrow-cont">
+        <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
+    ></a>
+  </div>
+</div>
+<!-- </section> -->
