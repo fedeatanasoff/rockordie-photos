@@ -21,7 +21,7 @@ export class PhotosService {
     this.cargar();
   }
 
-  public cargar() {
+  cargar() {
     this.cargandoFotos = true;
     this.http
       .get('https://rockordie-photos.firebaseio.com/fotos.json')
@@ -31,6 +31,12 @@ export class PhotosService {
 
         console.log('desde cargando nuevo', this.photos);
       });
+  }
+
+  obtenerFoto(id: string) {
+    return this.http.get(
+      `https://rockordie-photos.firebaseio.com/fotos_id/${id}.json`
+    );
   }
 
   getPhoto(key$: string) {

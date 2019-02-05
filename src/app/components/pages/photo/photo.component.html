@@ -4,11 +4,15 @@
   class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
   *ngIf="photo"
 >
+  <app-loading *ngIf="photoLoading"></app-loading>
+
   <div class="ae-grid ae-grid--collapse">
     <div class="ae-grid__item item-lg-6">
       <!-- Image -->
-
-      <img src="assets/img/photos/{{ photo.imagen }}" alt="Urku Portfolio" />
+      <img
+        src="assets/img/photos/{{ photo.imagen }}.jpg"
+        alt="Urku Portfolio"
+      />
     </div>
     <div class="ae-grid__item item-lg-5 au-lg-ptp-1 item-lg--offset-1">
       <!-- Text content -->
@@ -40,19 +44,4 @@
       </div>
     </div>
   </div>
-  <!-- <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
-      <div class="ae-grid__item item-lg-5 au-lg-ptp-1"></div>
-    </div> -->
 </section>
-<!-- <div class="ae-container-fluid au-pt-4 au-pb-4">
-  <div class="group-buttons">
-    <a
-      [routerLink]="['/inicio']"
-      routerLinkActive="router-link-active"
-      class="au-mt-2 arrow-button arrow-button--right"
-      >Volver<span class="arrow-cont">
-        <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
-    ></a>
-  </div> -->
-
-<!-- </section> -->

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PhotosService } from '../../../services/photos.service';
+import { Photo } from '../../../interfaces/photo';
 
 @Component({
   selector: 'app-photo',
@@ -8,8 +9,9 @@ import { PhotosService } from '../../../services/photos.service';
   styleUrls: ['./photo.component.css']
 })
 export class PhotoComponent implements OnInit {
-  photo: any;
-  id: string;
+  photo: Photo;
+  error: string;
+  photoLoading: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,13 +19,15 @@ export class PhotoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.route.params.subscribe(parametros => {
-    //   console.log('parametro =>', parametros);
-    //   this.photoService.getPhoto(parametros['id']).subscribe((foto: any) => {
-    //     this.photo = foto;
-    //     // this.id = parametros['id'];
-    //     console.log('tratando de ver si llega el objeto =>', this.photo);
-    //   });
-    // });
+    this.photoLoading = true;
+    this.route.params.subscribe(parametro => {
+      this.photoService
+        .obtenerFoto(parametro['id'])
+        .subscribe((foto: Photo) => {
+          this.photo = foto;
+          this.photoLoading = false;
+          console.log('foto que llego por id =>', this.photo);
+        });
+    });
   }
 }
