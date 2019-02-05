@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PhotosService } from '../../services/photos.service';
+import { PhotosService } from '../../../services/photos.service';
 
 @Component({
   selector: 'app-search',

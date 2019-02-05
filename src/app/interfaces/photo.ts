@@ -5,4 +5,5 @@ export interface Photo {
   imagen: string;
   lugar: string;
   web: string;
+  id: string;
 }

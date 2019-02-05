@@ -2,16 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { AboutComponent } from './pages/about/about.component';
-import { PhotoComponent } from './pages/photo/photo.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { PortfolioComponent } from './components/pages/portfolio/portfolio.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { PhotoComponent } from './components/pages/photo/photo.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ContactComponent } from './pages/contact/contact.component';
-import { SearchComponent } from './pages/search/search.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { SearchComponent } from './components/pages/search/search.component';
 import { KeysPipe } from './pipes/keys.pipe';
-import { TarjetaMasonryComponent } from './components/shared/tarjeta-masonry/tarjeta-masonry.component';
+import { TarjetaMasonryComponent } from './/components/shared/tarjeta-masonry/tarjeta-masonry.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TarjetaMasonryComponent } from './components/shared/tarjeta-masonry/tar
     ContactComponent,
     SearchComponent,
     KeysPipe,
-    TarjetaMasonryComponent
+    TarjetaMasonryComponent,
+    LoadingComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

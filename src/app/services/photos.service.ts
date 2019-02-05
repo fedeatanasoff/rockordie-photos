@@ -10,35 +10,27 @@ export class PhotosService {
   photosURL = `https://rockordie-photos.firebaseio.com/photos.json`;
   photoURL = `https://rockordie-photos.firebaseio.com/photos`;
 
+  cargandoFotos: boolean;
+  photos: any[];
   cargando = true;
   fotos: any;
   fotosFiltradas: any[] = [];
   cargandoFiltrada = true;
   busquedaVacia: string;
   constructor(private http: HttpClient) {
-    this.cargarPhotos();
+    this.cargar();
   }
 
-  public cargarPhotos() {
-    // return new Promise((resolve, reject) => {
-    //   this.http
-    //     .get('https://rockordie-photos.firebaseio.com/photos.json')
-    //     .subscribe((data: Photo[]) => {
-    //       this.cargando = false;
-    //       this.fotos = data;
-    //       resolve();
-    //     });
-    // });
-    // imagen: string;
-    return this.http
-      .get('https://rockordie-photos.firebaseio.com/photos.json')
-      .pipe(
-        map((foto: Photo) => {
-          this.fotos = foto;
-          console.log(this.fotos);
-          return foto;
-        })
-      );
+  public cargar() {
+    this.cargandoFotos = true;
+    this.http
+      .get('https://rockordie-photos.firebaseio.com/fotos.json')
+      .subscribe((resp: any[]) => {
+        this.cargandoFotos = false;
+        this.photos = resp;
+
+        console.log('desde cargando nuevo', this.photos);
+      });
   }
 
   getPhoto(key$: string) {

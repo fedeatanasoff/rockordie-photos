@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class TarjetaMasonryComponent implements OnInit {
   @Input() photoInput: any;
-  @Input() key: any;
+  // @Input() key: any;
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -16,6 +16,7 @@ export class TarjetaMasonryComponent implements OnInit {
   }
 
   verPhoto(index: any) {
+    console.log('ir a foto =>', index);
     this.router.navigate(['/photo', index]);
   }
 }
