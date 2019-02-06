@@ -11,26 +11,30 @@ export class PhotosService {
   photoURL = `https://rockordie-photos.firebaseio.com/photos`;
 
   cargandoFotos: boolean;
-  photos: any[];
+  photos: any[] = [];
+  // fotosBuscadas: any[];
   cargando = true;
-  fotos: any;
+  // fotos: any;
   fotosFiltradas: any[] = [];
-  cargandoFiltrada = true;
-  busquedaVacia: string;
+  // cargandoFiltrada = true;
+  // busquedaVacia: string;
   constructor(private http: HttpClient) {
     this.cargar();
   }
 
   cargar() {
     this.cargandoFotos = true;
-    this.http
-      .get('https://rockordie-photos.firebaseio.com/fotos.json')
-      .subscribe((resp: any[]) => {
-        this.cargandoFotos = false;
-        this.photos = resp;
+    return new Promise((resolve, reject) => {
+      this.http
+        .get('https://rockordie-photos.firebaseio.com/fotos.json')
+        .subscribe((resp: any[]) => {
+          this.cargandoFotos = false;
+          this.photos = resp;
 
-        console.log('desde cargando nuevo', this.photos);
-      });
+          console.log('desde cargando nuevo', this.photos);
+          resolve();
+        });
+    });
   }
 
   obtenerFoto(id: string) {
@@ -39,51 +43,24 @@ export class PhotosService {
     );
   }
 
-  getPhoto(key$: string) {
-    const url = `${this.photoURL}/${key$}.json`;
-
-    return this.http.get(url).pipe(
-      map((foto: Photo) => {
-        console.log('getPhoto =>', foto);
-        return foto;
-      })
-    );
+  buscarFotos(banda: string) {
+    if (this.photos.length === 0) {
+      this.cargar().then(() => {
+        this.filtrarFotos(banda);
+      });
+    } else {
+      this.filtrarFotos(banda);
+    }
   }
 
-  // buscarPhoto(termino: string) {
-  //   this.busquedaVacia = null;
-  //   if (this.fotosFiltradas.length === 0) {
-  //     this.cargarPhotos().then(() => {
-  //       this.cargandoFiltrada = false;
-  //       this.filtrarPhoto(termino);
-  //       if (this.fotosFiltradas.length === 0) {
-  //         this.busquedaVacia = `No se encontraron resultados para : ${termino}`;
-  //       }
-  //     });
-  //   } else {
-  //     this.cargandoFiltrada = false;
-  //     this.filtrarPhoto(termino);
-  //   }
+  private filtrarFotos(banda: string) {
+    console.log('filtrando =>', this.photos);
 
-  //   // console.log(this.fotosFiltradas);
-  // }
+    const palabra = banda.toLowerCase();
+    this.fotosFiltradas = this.photos.filter((foto: Photo) => {
+      return foto.banda.toLocaleLowerCase().indexOf(palabra) >= 0;
+    });
 
-  // private filtrarPhoto(termino: string) {
-  //   const palabra = termino.toLowerCase();
-  //   this.fotosFiltradas = this.fotos.filter(
-  //     foto => foto.titulo.toLocaleLowerCase().indexOf(palabra) >= 0
-  //   );
-  // }
-
-  // getPhotos(): Observable<Photo> {
-  //   return this.http.get<Photo>(
-  //     'https://rockordie-photos.firebaseio.com/photos.json'
-  //   );
-  // }
-
-  // getPhoto(id: number) {
-  //   return this.http.get(
-  //     `https://rockordie-photos.firebaseio.com/photos/${id}.json`
-  //   );
-  // }
+    console.log('filtradas por termino =>', this.fotosFiltradas);
+  }
 }

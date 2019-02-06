@@ -12,11 +12,11 @@ export class TarjetaMasonryComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    console.log(this.photoInput);
+    // console.log(this.photoInput);
   }
 
   verPhoto(index: any) {
-    console.log('ir a foto =>', index);
+    // console.log('ir a foto =>', index);
     this.router.navigate(['/photo', index]);
   }
 }

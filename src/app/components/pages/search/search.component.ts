@@ -14,9 +14,9 @@ export class SearchComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.route.params.subscribe(parametro => {
-    //   console.log(parametro['termino']);
-    //   this.photoService.buscarPhoto(parametro['termino']);
-    // });
+    this.route.params.subscribe(parametro => {
+      console.log(parametro['termino']);
+      this.photoService.buscarFotos(parametro['termino']);
+    });
   }
 }
