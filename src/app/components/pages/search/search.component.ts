@@ -8,14 +8,17 @@ import { PhotosService } from '../../../services/photos.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  id: string;
   constructor(
     private route: ActivatedRoute,
     public photoService: PhotosService
   ) {}
 
   ngOnInit() {
+    this.id = null;
     this.route.params.subscribe(parametro => {
       console.log(parametro['termino']);
+      this.id = parametro['termino'];
       this.photoService.buscarFotos(parametro['termino']);
     });
   }
