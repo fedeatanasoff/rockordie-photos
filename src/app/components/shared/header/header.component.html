@@ -1,109 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">Rock or Die</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarColor03"
-      aria-controls="navbarColor03"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Rock or Die</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor03"
+        aria-controls="navbarColor03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor03">
-      <ul class="navbar-nav mr-auto">
-        <li>
-          <a
-            class="nav-link"
-            [routerLink]="['/inicio']"
-            routerLinkActive="router-link-active"
-            >Inicio</a
-          >
-        </li>
-        <li>
-          <a
-            class="nav-link"
-            [routerLink]="['/sobre-mi']"
-            routerLinkActive="router-link-active"
-            >Sobre Mi</a
-          >
-        </li>
-        <li>
-          <a
-            class="nav-link"
-            [routerLink]="['/contacto']"
-            routerLinkActive="router-link-active"
-            >Contacto</a
-          >
-        </li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0">
-        <input
-          class="form-control mr-sm-2"
-          type="text"
-          placeholder="buscar banda"
-          (keyup.enter)="buscar(buscarInput.value)"
-          #buscarInput
-        />
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <a
+              class="nav-link"
+              [routerLink]="['/inicio']"
+              routerLinkActive="router-link-active"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              [routerLink]="['/sobre-mi']"
+              routerLinkActive="router-link-active"
+              >Sobre Mi</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              [routerLink]="['/contacto']"
+              routerLinkActive="router-link-active"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="buscar banda"
+            (keyup.enter)="buscar(buscarInput.value)"
+            #buscarInput
+          />
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-
-<!-- <header
-  class="ae-container-fluid ae-container-fluid--full rk-header animated fadeIn"
->
-  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu" />
-  <label for="mobile-menu">
-    <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
-    <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
-    <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
-  </label>
-  <div class="ae-container-fluid rk-topbar" *ngIf="_infoPaginaService._cargada">
-    <h1 class="rk-logo">
-      <a [routerLink]="['/inicio']" routerLinkActive="router-link-active">{{
-        _infoPaginaService._info.titulo
-      }}</a>
-    </h1>
-    <nav class="rk-navigation">
-      <ul class="rk-menu">
-        <li class="rk-menu__item" routerLinkActive="active">
-          <a class="rk-menu__link" [routerLink]="['/inicio']">Home</a>
-        </li>
-        <li class=" rk-menu__item" routerLinkActive="active">
-          <a
-            [routerLink]="['/sobre-mi']"
-            routerLinkActive="router-link-active"
-            class="rk-menu__link"
-            >Sobre mi</a
-          >
-        </li>
-
-        <li class="rk-menu__item" routerLinkActive="active">
-          <a
-            [routerLink]="['/contacto']"
-            routerLinkActive="router-link-active"
-            class="rk-menu__link"
-            >Contacto</a
-          >
-        </li>
-      </ul>
-      <div class="rk-search">
-        <input
-          type="text"
-          placeholder="Buscar banda"
-          id="urku-search"
-          class="rk-search-field"
-          (keyup.enter)="buscar(buscarInput.value)"
-          #buscarInput
-        />
-        <label for="urku-search">
-          <svg><use xlink:href="assets/img/symbols.svg#icon-search"></use></svg>
-        </label>
-      </div>
-    </nav>
-  </div>
-</header> -->
+  </nav>
+</header>

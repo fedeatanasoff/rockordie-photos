@@ -1,39 +1,28 @@
-<footer
-  class="ae-container-fluid rk-footer "
-  *ngIf="_infoPaginaService._cargada"
->
-  <div class="ae-grid ae-grid--collapse">
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
-      <ul class="rk-menu rk-footer-menu">
-        <li class="rk-menu__item">
-          <a [routerLink]="['/sobre-mi']" class="rk-menu__link">Sobre mi</a>
-        </li>
-
-        <li class="rk-menu__item">
-          <a [routerLink]="['/contacto']" class="rk-menu__link">Contacto</a>
-        </li>
-      </ul>
-      <p class="rk-footer__text rk-footer__copy ">
-        <span class="ae-u-bold">© </span
-        ><span class="ae-u-bolder"
-          >{{ anio }} {{ _infoPaginaService._info.titulo }} </span
-        >All Right Reserved.
-      </p>
+<div class="container text-center">
+  <footer class="">
+    <div class="row mt-5 social-link">
+      <div class="col">
+        <a href=""
+          ><span class="icon-footer text-muted"
+            ><i class="fab fa-facebook-square fa-2x"></i></span
+        ></a>
+        <a href=""
+          ><span class="icon-footer text-muted"
+            ><i class="fab fa-instagram fa-2x"></i></span
+        ></a>
+        <a href=""
+          ><span class="icon-footer text-muted"
+            ><i class="fab fa-flickr fa-2x"></i></span
+        ></a>
+      </div>
     </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a
-        class="rk-social-btn "
-        *ngFor="let item of _infoPaginaService._redes"
-        [href]="item.url"
-        target="_blank"
-      >
-        <img src="assets/img/{{ item.img }}" class="img-hover" alt="" />
-      </a>
+    <div class="row m-2">
+      <div class="col">
+        <span
+          ><i class="far fa-copyright"></i>2019 -
+          <a href="" class="copy-fd">fd-atanasoff</a></span
+        >
+      </div>
     </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-      <p class="rk-footer__text rk-footer__by">
-        Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a>
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
+</div>

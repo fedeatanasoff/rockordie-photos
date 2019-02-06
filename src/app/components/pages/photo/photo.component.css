@@ -4,10 +4,25 @@
   }
 }
 
+.imagen {
+  width: 100% !important;
+}
+
 .link-photo {
   color: #000;
 }
 
 .link-photo:hover {
   text-decoration: none;
+}
+
+.link-photo-volver {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.link-photo-volver:hover {
+  text-decoration: none;
+  color: #222222 !important;
 }

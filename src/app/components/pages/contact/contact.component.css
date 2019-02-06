@@ -2,3 +2,16 @@
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
+.icon-contact {
+  padding: 0 10px;
+  transition: all 0.3s ease-in;
+}
+
+.icon-contact:hover {
+  color: #222222 !important;
+}
+
+.contacto {
+  height: 100%;
+}

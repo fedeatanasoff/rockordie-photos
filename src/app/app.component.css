@@ -1,0 +1,16 @@
+.page-container {
+  min-height: 100%;
+}
+
+.secciones {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.footer {
+  /* background-color: red; */
+  position: relative;
+  height: 100px;
+  margin-top: -150px;
+  clear: both;
+}

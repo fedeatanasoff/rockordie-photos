@@ -1,0 +1,10 @@
+header,
+nav,
+.collapse,
+.navbar-collapse,
+.nav-link,
+.navbar-nav,
+.mr-auto,
+.navbar navbar-expand-lg {
+  overflow: hidden;
+}

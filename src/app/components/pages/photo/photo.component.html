@@ -1,56 +1,11 @@
-<!-- <section class="ae-container-fluid ae-container-fluid--full animated fadeIn"> -->
-
-<!-- <section
-  class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
-  *ngIf="photo"
->
-  <app-loading *ngIf="photoLoading"></app-loading>
-
-  <div class="ae-grid ae-grid--collapse">
-    <div class="ae-grid__item item-lg-6">
-      <img
-        src="assets/img/photos/{{ photo.imagen }}.jpg"
-        alt="Urku Portfolio"
-      />
-    </div>
-    <div class="ae-grid__item item-lg-5 au-lg-ptp-1 item-lg--offset-1">
-      <h4 class="ae-u-bolder">{{ photo.banda }}</h4>
-
-      <p class="ae-kappa">
-        <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;{{ photo.lugar }}
-      </p>
-      <p class="ae-kappa">
-        <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{
-          photo.fecha | date: "dd - MM - y"
-        }}
-      </p>
-
-      <p class="rk-portfolio-inner-website ">
-        <a [href]="photo.web" class="ae-kappa "
-          ><i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Sitio Web</a
-        >
-      </p>
-      <div class="group-buttons">
-        <a
-          [routerLink]="['/inicio']"
-          routerLinkActive="router-link-active"
-          class="au-mt-2 arrow-button arrow-button--center"
-          >Volver<span class="arrow-cont">
-            <svg>
-              <use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
-        ></a>
-      </div>
-    </div>
-  </div>
-</section> -->
-<div class="row">
-  <div class="col mb-5">
+<div class="row m-5">
+  <div class="col  ">
     <app-loading *ngIf="photoLoading"></app-loading>
   </div>
 </div>
 <div class="row" *ngIf="!photoLoading">
-  <div class="col-sm-6">
-    <img src="assets/img/photos/{{ photo.imagen }}.jpg" class="img-fluid" />
+  <div class="col-sm-6 ">
+    <img src="assets/img/photos/{{ photo.imagen }}.jpg" class="imagen" />
   </div>
   <div class="col-sm-6 photo-description">
     <h2 class="">{{ photo.banda }}</h2>
@@ -74,10 +29,13 @@
     </p>
   </div>
 </div>
-<div class="row">
-  <div class="">
-    <a [routerLink]="['/inicio']" class=""
-      ><span><i class="fas fa-arrow-left"></i></span> Volver
+<div class="row mt-5" *ngIf="!photoLoading">
+  <div class="col text-right">
+    <a [routerLink]="['/inicio']" class="link-photo-volver text-muted"
+      ><span class="arrow-volver"
+        ><i class="fas fa-long-arrow-alt-left "></i
+      ></span>
+      Volver
     </a>
   </div>
 </div>

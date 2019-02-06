@@ -1,81 +1,31 @@
-<!-- <section class="ae-container-fluid ae-container-fluid--full animated fadeIn">
-  <div class="item-inside__meta">
-    <h1 class="ae-u-bolder rk-portfolio-title ">Contacto</h1>
-    <br />
-    <p class="ae-theta rk-portfolio-category ">
-      Puedes ponerte en contacto conmigo a traves de mis redes sociales
-    </p>
-  </div>
-  <div class="ae-grid ae-grid--alt au-xs-ptp-1" align="center">
-    <div
-      class="ae-grid__item--alt item-lg-4"
-      *ngFor="let item of _infoService._redes"
-    >
-      <a [href]="item.url" target="_blank">
-        <img
-          src="assets/img/{{ item.img }}"
-          alt=""
-          width="25%"
-          class="img-hover"
-        />
-      </a>
-      <h5 class="ae-u-bolder au-mt-2">{{ item.user }}</h5>
-      <br />
+<div class="contacto">
+  <div class="row ">
+    <div class="col text-center m-5">
+      <h1>Contacto</h1>
+      <p class="">
+        Puedes ponerte en contacto conmigo a traves de mis redes sociales
+      </p>
     </div>
   </div>
-
-  <div class="item-inside__meta">
-    <br />
-    <br />
-    <br />
-    <br />
-    <p class="ae-theta rk-portfolio-category titulo-contact">
-      o tambien via email
-    </p>
-  </div>
-
-  <div
-    class="ae-grid ae-grid--alt au-xs-ptp-1"
-    align="center"
-    *ngIf="_infoService._cargada"
-  >
-    <div class="ae-grid__item--alt item-lg-4 item-lg--offset-4">
-      <a href="mailto:{{ _infoService._info.email }}"
-        ><img src="assets/img/social/email.png" alt="" width="25%"
-      /></a>
-      <h5 class="ae-u-bolder au-mt-2">{{ _infoService._info.email }}</h5>
+  <div class="row">
+    <div class="col text-center">
+      <a href=""
+        ><span class="icon-contact text-muted"
+          ><i class="fab fa-facebook-square fa-3x"></i></span
+      ></a>
+      <a href=""
+        ><span class="icon-contact text-muted"
+          ><i class="fab fa-instagram fa-3x"></i></span
+      ></a>
+      <a href=""
+        ><span class="icon-contact text-muted"
+          ><i class="fab fa-flickr fa-3x"></i></span
+      ></a>
     </div>
   </div>
-</section> -->
-<div class="row">
-  <div class="col text-center m-5">
-    <h1>Contacto</h1>
-    <p class="">
-      Puedes ponerte en contacto conmigo a traves de mis redes sociales
-    </p>
-  </div>
-</div>
-<div class="row">
-  <div class="col text-center">
-    <a href=""
-      ><span><i class="fab fa-facebook-square fa-3x"></i></span
-    ></a>
-    <a href=""
-      ><span><i class="fab fa-instagram fa-3x"></i></span
-    ></a>
-    <a href=""
-      ><span><i class="fab fa-flickr fa-3x"></i></span
-    ></a>
-  </div>
-  <!-- <div class="col text-center">
-    <span><i class="fab fa-flickr fa-3x"></i></span>
-  </div>
-  <div class="col text-center">
-    <span><i class="fab fa-instagram fa-3x"></i></span>
-  </div> -->
-</div>
-<div class="row m-5">
-  <div class="col text-center">
-    tambien puedes enviarme un email a <b>rockoordie@gmail.com</b>
+  <div class="row m-5">
+    <div class="col text-center">
+      tambien puedes enviarme un email a <b>rockoordie@gmail.com</b>
+    </div>
   </div>
 </div>

@@ -1,58 +1,23 @@
-<!-- <section class="ae-container-fluid ae-container-fluid--full animated fadeIn">
-  <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
-    <div class="ae-grid ae-grid--collapse">
-      <div class="ae-grid__item item-lg-6">
-        <img src="assets/img/inner-3.jpg" alt="Urku Portfolio" />
-      </div>
-      <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
-        <h4 class="ae-u-bolder">Sobre Mi</h4>
-        <p class="ae-eta">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit.
-        </p>
-        <p class="ae-eta">
-          It includes a A6 flyer, A5 folder, A4 horizontal paper and a business
-          card mockup. You can easily put your own graphics and create a new
-          layout according to your needs.
-        </p>
-      </div>
-    </div>
+<!-- <div class="row photo-component ">
+   <div class="col mb-5 ">
+    <app-loading *ngIf="photoLoading"></app-loading>
+  </div> 
+</div> -->
+<div class="row mt-5 mb-5" *ngIf="!photoLoading">
+  <div class="col-sm-6 ">
+    <img
+      src="https://cdn-images-1.medium.com/max/800/1*JwGR7dlkvLlwuv47XnGsEA.jpeg"
+      class="imagen"
+    />
   </div>
-</section> -->
-
-<section
-  class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
->
-  <div class="ae-grid ae-grid--collapse">
-    <div class="ae-grid__item item-lg-6">
-      <!-- Image -->
-      <img
-        src="https://cdn.shopify.com/s/files/1/0004/5717/9172/products/wall-art-cowboy-bebop-poster-canvas--spike-spiegel-silhouette-with-cigarette-1_x700.jpg?v=1525966529"
-        alt="Urku Portfolio"
-      />
-    </div>
-    <div class="ae-grid__item item-lg-5 au-lg-ptp-1 item-lg--offset-1">
-      <!-- Text content -->
-      <h4 class="ae-u-bolder">Sobre mi</h4>
-
-      <p class="ae-kappa">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-        distinctio quis! Quas, ex maiores ullam dicta iste inventore nulla
-        aliquam id facere necessitatibus porro, laborum beatae quidem eius
-        doloribus quibusdam repellendus obcaecati corporis nam nihil illum?
-        Quaerat, nulla quasi sequi molestias neque molestiae recusandae deserunt
-        ex cupiditate est, impedit eum.
-      </p>
-      <div class="group-buttons">
-        <a
-          [routerLink]="['/inicio']"
-          routerLinkActive="router-link-active"
-          class="au-mt-2 arrow-button arrow-button--center"
-          >Volver<span class="arrow-cont">
-            <svg>
-              <use xlink:href="assets/img/symbols.svg#arrow"></use></svg></span
-        ></a>
-      </div>
-    </div>
+  <div class="col-sm-6 photo-description">
+    <h1 class="">Sobre mi</h1>
+    <hr />
+    <p class="">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti odio
+      necessitatibus voluptate cum nisi obcaecati sed consequatur, impedit
+      expedita, tempore esse maxime, delectus quidem dolorum nihil alias earum
+      eum excepturi beatae veniam nulla qui veritatis.
+    </p>
   </div>
-</section>
+</div>
