@@ -1,6 +1,6 @@
 <!-- <section class="ae-container-fluid ae-container-fluid--full animated fadeIn"> -->
 
-<section
+<!-- <section
   class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner animated fadeIn"
   *ngIf="photo"
 >
@@ -8,14 +8,12 @@
 
   <div class="ae-grid ae-grid--collapse">
     <div class="ae-grid__item item-lg-6">
-      <!-- Image -->
       <img
         src="assets/img/photos/{{ photo.imagen }}.jpg"
         alt="Urku Portfolio"
       />
     </div>
     <div class="ae-grid__item item-lg-5 au-lg-ptp-1 item-lg--offset-1">
-      <!-- Text content -->
       <h4 class="ae-u-bolder">{{ photo.banda }}</h4>
 
       <p class="ae-kappa">
@@ -44,4 +42,39 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+<div class="row">
+  <div class="col mb-5">
+    <app-loading *ngIf="photoLoading"></app-loading>
+  </div>
+</div>
+<div class="row" *ngIf="!photoLoading">
+  <div class="col-sm-6">
+    <img src="assets/img/photos/{{ photo.imagen }}.jpg" class="img-fluid" />
+  </div>
+  <div class="col-sm-6 photo-description">
+    <h2 class="">{{ photo.banda }}</h2>
+    <hr />
+    <p class="">
+      <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;{{ photo.lugar }}
+    </p>
+    <p class="">
+      <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{
+        photo.fecha | date: "dd - MM - y"
+      }}
+    </p>
+
+    <p class="">
+      <a [href]="photo.web" class="ae-kappa "
+        ><i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Sitio Web</a
+      >
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="">
+    <a [routerLink]="['/inicio']" class=""
+      ><span><i class="fas fa-arrow-left"></i></span> Volver
+    </a>
+  </div>
+</div>

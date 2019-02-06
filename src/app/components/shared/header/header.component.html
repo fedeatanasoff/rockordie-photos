@@ -1,4 +1,59 @@
-<header
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Rock or Die</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a
+            class="nav-link"
+            [routerLink]="['/inicio']"
+            routerLinkActive="router-link-active"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            [routerLink]="['/sobre-mi']"
+            routerLinkActive="router-link-active"
+            >Sobre Mi</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            [routerLink]="['/contacto']"
+            routerLinkActive="router-link-active"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="text"
+          placeholder="buscar banda"
+          (keyup.enter)="buscar(buscarInput.value)"
+          #buscarInput
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <header
   class="ae-container-fluid ae-container-fluid--full rk-header animated fadeIn"
 >
   <input type="checkbox" id="mobile-menu" class="rk-mobile-menu" />
@@ -51,4 +106,4 @@
       </div>
     </nav>
   </div>
-</header>
+</header> -->
