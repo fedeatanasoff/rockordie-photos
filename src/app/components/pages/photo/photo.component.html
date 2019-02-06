@@ -56,17 +56,20 @@
     <h2 class="">{{ photo.banda }}</h2>
     <hr />
     <p class="">
-      <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;{{ photo.lugar }}
+      <i class="fas fa-map-marker-alt text-primary"></i>&nbsp;&nbsp;{{
+        photo.lugar
+      }}
     </p>
     <p class="">
-      <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;{{
+      <i class="far fa-calendar-alt text-primary"></i>&nbsp;&nbsp;{{
         photo.fecha | date: "dd - MM - y"
       }}
     </p>
 
     <p class="">
-      <a [href]="photo.web" class="ae-kappa "
-        ><i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Sitio Web</a
+      <a [href]="photo.web" class="link-photo" target="_blank"
+        ><i class="fas fa-external-link-alt text-primary"></i>&nbsp;&nbsp;Sitio
+        Web</a
       >
     </p>
   </div>

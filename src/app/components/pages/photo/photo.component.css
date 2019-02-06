@@ -3,3 +3,11 @@
     margin-top: 1.5rem;
   }
 }
+
+.link-photo {
+  color: #000;
+}
+
+.link-photo:hover {
+  text-decoration: none;
+}
