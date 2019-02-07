@@ -1,5 +1,5 @@
 <app-loading *ngIf="!photoService.fotosFiltradas"></app-loading>
-<div class="card-columns">
+<div class="card-columns mt-3">
   <app-tarjeta-masonry
     *ngFor="let photo of photoService.fotosFiltradas"
     [photoInput]="photo"
