@@ -1,23 +1,15 @@
-<!-- <div class="row photo-component ">
-   <div class="col mb-5 ">
-    <app-loading *ngIf="photoLoading"></app-loading>
-  </div> 
-</div> -->
-<div class="row mt-5 mb-5" *ngIf="!photoLoading">
-  <div class="col-sm-6 ">
-    <img
-      src="https://cdn-images-1.medium.com/max/800/1*JwGR7dlkvLlwuv47XnGsEA.jpeg"
-      class="imagen"
-    />
+<div class="row ">
+  <div class="col mt-5 mb-5 ">
+    <app-loading *ngIf="loading"></app-loading>
   </div>
+</div>
+<div class="row mb-5 about animated fadeIn" *ngIf="!loading">
   <div class="col-sm-6 photo-description">
     <h1 class="">Sobre mi</h1>
     <hr />
-    <p class="">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti odio
-      necessitatibus voluptate cum nisi obcaecati sed consequatur, impedit
-      expedita, tempore esse maxime, delectus quidem dolorum nihil alias earum
-      eum excepturi beatae veniam nulla qui veritatis.
-    </p>
+    <p class="">{{ about.texto }}</p>
+  </div>
+  <div class="col-sm-6 ">
+    <img src="{{ about.image }}" class="imagen" />
   </div>
 </div>

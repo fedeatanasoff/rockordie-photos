@@ -1,9 +1,3 @@
-@media (max-width: 578px) {
-  .photo-description {
-    margin-top: 1.5rem;
-  }
-}
-
 .imagen {
   width: 100% !important;
 }
@@ -25,4 +19,8 @@
 .link-photo-volver:hover {
   text-decoration: none;
   color: #222222 !important;
+}
+
+.about {
+  margin-top: -3rem;
 }

@@ -1,4 +1,9 @@
-<app-loading *ngIf="photoService.cargandoFotos"></app-loading>
+<div class="row mt-5">
+  <div class="col">
+    <app-loading *ngIf="photoService.cargandoFotos"></app-loading>
+  </div>
+</div>
+
 <div class="card-columns mb-5">
   <app-tarjeta-masonry
     *ngFor="let photo of photoService.photos"

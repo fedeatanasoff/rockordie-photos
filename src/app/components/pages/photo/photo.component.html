@@ -1,9 +1,9 @@
-<div class="row m-5">
-  <div class="col  ">
+<div class="row">
+  <div class="col mt-5 ">
     <app-loading *ngIf="photoLoading"></app-loading>
   </div>
 </div>
-<div class="row" *ngIf="!photoLoading">
+<div class="row mt-1 animated fadeIn" *ngIf="!photoLoading">
   <div class="col-sm-6 ">
     <img src="assets/img/photos/{{ photo.imagen }}.jpg" class="imagen" />
   </div>

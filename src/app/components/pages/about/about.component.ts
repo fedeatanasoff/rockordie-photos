@@ -7,9 +7,16 @@ import { InfoPaginaService } from '../../../services/info-pagina.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  about: any;
+  loading: boolean;
   constructor(public _servicio: InfoPaginaService) {}
 
   ngOnInit() {
-    console.log(this._servicio._about);
+    this.loading = true;
+    this._servicio.cargarInfo().subscribe((data: any) => {
+      console.log('about =>', data);
+      this.loading = false;
+      this.about = data.about;
+    });
   }
 }

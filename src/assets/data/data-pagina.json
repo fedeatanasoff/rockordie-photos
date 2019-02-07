@@ -1,23 +1,27 @@
 {
-  "titulo": "Rock or Die Photo´s",
+  "titulo": "Rock or Die ",
+  "nombre_corto": "fd-atanasoff",
   "email": "rockoordie@gmail.com",
-  "nombre_corto": "Rock or Die",
-  "pagina-autor": "https://fedeatanasoff.github.io/cv/",
+  "pagina-autor": "https://fd-atanasoff@netlify.com",
   "redes": [
     {
-      "img": "facebook.png",
+      "class": "fab fa-facebook-square",
       "url": "https://www.facebook.com/rockoordie",
       "user": "/rockoordie"
     },
     {
-      "img": "ig.png",
+      "class": "fab fa-instagram",
       "url": "https://www.instagram.com/rockoordie",
       "user": "@rockoordie"
     },
     {
-      "img": "flickr.png",
+      "class": "fab fa-flickr",
       "url": "https://www.flickr.com/photos/rockoordie",
       "user": "/rockoordie"
     }
-  ]
+  ],
+  "about": {
+    "image": "https://cdn-images-1.medium.com/max/800/1*JwGR7dlkvLlwuv47XnGsEA.jpeg",
+    "texto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti odio necessitatibus voluptate cum nisi obcaecati sed consequatur, impeditexpedita, tempore esse maxime, delectus quidem dolorum nihil alias earum eum excepturi beatae veniam nulla qui veritatis."
+  }
 }
