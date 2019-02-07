@@ -8,8 +8,15 @@ import { InfoPaginaService } from '../../../services/info-pagina.service';
 })
 export class FooterComponent implements OnInit {
   anio: number = new Date().getFullYear();
-
+  loading: boolean;
+  info: any;
   constructor(public _infoPaginaService: InfoPaginaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loading = true;
+    this._infoPaginaService.cargarInfo().subscribe((data: any) => {
+      this.loading = false;
+      this.info = data;
+    });
+  }
 }

@@ -1,28 +1,29 @@
-<div class="container text-center">
-  <footer class="">
-    <div class="row mt-5 social-link">
-      <div class="col">
-        <a href=""
-          ><span class="icon-footer text-muted"
-            ><i class="fab fa-facebook-square fa-2x"></i></span
-        ></a>
-        <a href=""
-          ><span class="icon-footer text-muted"
-            ><i class="fab fa-instagram fa-2x"></i></span
-        ></a>
-        <a href=""
-          ><span class="icon-footer text-muted"
-            ><i class="fab fa-flickr fa-2x"></i></span
-        ></a>
-      </div>
+<footer class="container text-center" *ngIf="!loading">
+  <div class="row mt-5 social-link">
+    <div class="col">
+      <a
+        *ngFor="let icon of info.redes"
+        [href]="icon.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><span class="icon-footer text-muted"
+          ><i class="{{ icon.class }} fa-2x"></i></span
+      ></a>
     </div>
-    <div class="row m-2">
-      <div class="col">
-        <span
-          ><i class="far fa-copyright"></i>2019 -
-          <a href="" class="copy-fd">fd-atanasoff</a></span
-        >
-      </div>
+  </div>
+  <div class="row m-2">
+    <div class="col">
+      <small
+        ><i class="far fa-copyright"></i>&nbsp;{{ info.titulo }}
+        <i class="fas fa-grip-lines-vertical"></i>&nbsp;
+        <a
+          [href]="info.web"
+          class="copy-fd"
+          target="_blank"
+          rel="noopener noreferrer"
+          >fd-atanasoff</a
+        ></small
+      >
     </div>
-  </footer>
-</div>
+  </div>
+</footer>

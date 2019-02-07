@@ -7,17 +7,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PhotosService {
-  photosURL = `https://rockordie-photos.firebaseio.com/photos.json`;
-  photoURL = `https://rockordie-photos.firebaseio.com/photos`;
-
   cargandoFotos: boolean;
   photos: any[] = [];
-  // fotosBuscadas: any[];
   cargando = true;
-  // fotos: any;
   fotosFiltradas: any[] = [];
-  // cargandoFiltrada = true;
-  // busquedaVacia: string;
+
   constructor(private http: HttpClient) {
     this.cargar();
   }
@@ -31,7 +25,6 @@ export class PhotosService {
           this.cargandoFotos = false;
           this.photos = resp;
 
-          console.log('desde cargando nuevo', this.photos);
           resolve();
         });
     });
@@ -60,7 +53,5 @@ export class PhotosService {
     this.fotosFiltradas = this.photos.filter((foto: Photo) => {
       return foto.banda.toLocaleLowerCase().indexOf(palabra) >= 0;
     });
-
-    console.log('filtradas por termino =>', this.fotosFiltradas);
   }
 }

@@ -17,7 +17,6 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.id = null;
     this.route.params.subscribe(parametro => {
-      console.log(parametro['termino']);
       this.id = parametro['termino'];
       this.photoService.buscarFotos(parametro['termino']);
     });

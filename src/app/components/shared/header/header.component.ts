@@ -21,7 +21,5 @@ export class HeaderComponent implements OnInit {
     }
 
     this.router.navigate(['/buscar', termino]);
-
-    console.log(termino);
   }
 }

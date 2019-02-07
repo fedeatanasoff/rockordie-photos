@@ -6,9 +6,7 @@ import { InfoPagina } from '../interfaces/info-pagina';
   providedIn: 'root'
 })
 export class InfoPaginaService {
-  constructor(private _http: HttpClient) {
-    // this.cargarInfo();
-  }
+  constructor(private _http: HttpClient) {}
 
   cargarInfo() {
     return this._http.get('./assets/data/data-pagina.json');

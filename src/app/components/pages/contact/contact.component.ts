@@ -7,7 +7,15 @@ import { InfoPaginaService } from '../../../services/info-pagina.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  info: any;
+  loading: boolean;
   constructor(public _infoService: InfoPaginaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loading = true;
+    this._infoService.cargarInfo().subscribe((data: any) => {
+      this.loading = false;
+      this.info = data;
+    });
+  }
 }

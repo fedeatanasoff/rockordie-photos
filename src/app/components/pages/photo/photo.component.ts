@@ -26,7 +26,6 @@ export class PhotoComponent implements OnInit {
         .subscribe((foto: Photo) => {
           this.photo = foto;
           this.photoLoading = false;
-          console.log('foto que llego por id =>', this.photo);
         });
     });
   }
