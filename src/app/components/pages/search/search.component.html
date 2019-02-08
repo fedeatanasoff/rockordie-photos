@@ -1,11 +1,11 @@
 <app-loading *ngIf="!photoService.fotosFiltradas"></app-loading>
-<div class="row mt-3 mb-3" *ngIf="photoService.fotosFiltradas.length > 0">
-  <div class="col">
+<div class="row mt-3 mb-3 " *ngIf="photoService.fotosFiltradas.length > 0">
+  <div class="col text-center">
     <h2>Mostrando resultados para la busqueda: {{ palabra }}</h2>
   </div>
 </div>
 <div class="row mt-3 mb-3" *ngIf="photoService.fotosFiltradas.length === 0">
-  <div class="col">
+  <div class="col text-center">
     <h2>No se encontraron resultados para la busqueda: {{ palabra }}</h2>
   </div>
 </div>

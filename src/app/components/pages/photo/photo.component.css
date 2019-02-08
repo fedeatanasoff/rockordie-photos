@@ -21,6 +21,7 @@
   font-weight: bold;
   transition: all 0.3s ease;
   display: inline;
+  cursor: pointer;
 }
 
 .link-photo-volver:active {
