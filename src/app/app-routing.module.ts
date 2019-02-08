@@ -8,7 +8,7 @@ import { SearchComponent } from './components/pages/search/search.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 const APP_ROUTES: Routes = [
-  { path: 'inicio', component: PortfolioComponent },
+  { path: '', component: PortfolioComponent },
   // { path: 'sobre-mi', component: AboutComponent },
   { path: 'photo/:id', component: PhotoComponent },
   { path: 'buscar/:termino', component: SearchComponent },
