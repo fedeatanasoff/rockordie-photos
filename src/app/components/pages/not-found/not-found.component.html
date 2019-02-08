@@ -1,0 +1,21 @@
+<div class="not-found animated fadeIn">
+  <div class="row mt-3 mb-5">
+    <div class="col text-center ">
+      <h2>404 - NOT FOUND</h2>
+      <p class="">
+        pagina no encontrada
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3 mb-5" *ngIf="!photoLoading">
+    <div class="col text-center">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        [routerLink]="['/inicio']"
+      >
+        <i class="fas fa-home"></i>&nbsp; Volver al inicio
+      </button>
+    </div>
+  </div>
+</div>

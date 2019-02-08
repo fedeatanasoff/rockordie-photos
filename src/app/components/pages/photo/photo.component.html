@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row" *ngIf="photoLoading">
   <div class="col mt-5 ">
-    <app-loading *ngIf="photoLoading"></app-loading>
+    <app-loading></app-loading>
   </div>
 </div>
-<div class="row mt-1 animated fadeIn" *ngIf="!photoLoading">
+<div class="row mt-3 animated fadeIn" *ngIf="!photoLoading">
   <div class="col-sm-6 ">
     <img src="assets/img/photos/{{ photo.imagen }}.jpg" class="imagen" />
   </div>
@@ -29,13 +29,39 @@
     </p>
   </div>
 </div>
-<div class="row mt-3 mb-5" *ngIf="!photoLoading">
+
+<div class="row mt-3 mb-5" *ngIf="!photoLoading && photo !== null">
   <div class="col text-right">
-    <a [routerLink]="['/inicio']" class="link-photo-volver text-muted"
-      ><span class="arrow-volver"
+    <h4 [routerLink]="['/inicio']" class="link-photo-volver text-muted">
+      <span class="arrow-volver"
         ><i class="fas fa-long-arrow-alt-left "></i
       ></span>
       Volver
-    </a>
+    </h4>
+  </div>
+</div>
+
+<div
+  class="photo-not-found animated fadeIn"
+  *ngIf="!photoLoading && photo == null"
+>
+  <div class="row mt-3 mb-5">
+    <div class="col text-center ">
+      <h2>404 - NOT FOUND</h2>
+      <p class="">
+        foto no encontrada
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3 mb-5" *ngIf="!photoLoading">
+    <div class="col text-center">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        [routerLink]="['/inicio']"
+      >
+        <i class="fas fa-home"></i>&nbsp; Volver al inicio
+      </button>
+    </div>
   </div>
 </div>

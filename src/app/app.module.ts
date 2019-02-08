@@ -13,6 +13,7 @@ import { SearchComponent } from './components/pages/search/search.component';
 import { KeysPipe } from './pipes/keys.pipe';
 import { TarjetaMasonryComponent } from './/components/shared/tarjeta-masonry/tarjeta-masonry.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     SearchComponent,
     KeysPipe,
     TarjetaMasonryComponent,
-    LoadingComponent
+    LoadingComponent,
+    NotFoundComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

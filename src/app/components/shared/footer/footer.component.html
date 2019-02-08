@@ -1,5 +1,5 @@
-<footer class="container text-center" *ngIf="!loading">
-  <div class="row mt-5 social-link">
+<footer class="container text-center mt-5" *ngIf="!loading">
+  <div class="row  social-link">
     <div class="col">
       <a
         *ngFor="let icon of info.redes"
@@ -11,7 +11,7 @@
       ></a>
     </div>
   </div>
-  <div class="row m-2">
+  <div class="row mt-3">
     <div class="col">
       <small
         ><i class="far fa-copyright"></i>&nbsp;{{ info.titulo }}

@@ -1,5 +1,16 @@
 <app-loading *ngIf="!photoService.fotosFiltradas"></app-loading>
-<div class="card-columns mt-3">
+<div class="row mt-3 mb-3" *ngIf="photoService.fotosFiltradas.length > 0">
+  <div class="col">
+    <h2>Mostrando resultados para la busqueda: {{ palabra }}</h2>
+  </div>
+</div>
+<div class="row mt-3 mb-3" *ngIf="photoService.fotosFiltradas.length === 0">
+  <div class="col">
+    <h2>No se encontraron resultados para la busqueda: {{ palabra }}</h2>
+  </div>
+</div>
+
+<div class="card-columns mt-3 mb-5">
   <app-tarjeta-masonry
     *ngFor="let photo of photoService.fotosFiltradas"
     [photoInput]="photo"
